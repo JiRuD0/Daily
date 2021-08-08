@@ -12,15 +12,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
         <script>
 
-var file = evt.target.files;
 
-//FileReaderの作成
-var reader = new FileReader();
+var fs = WScript.CreateObject("Scripting.FileSystemObject");
+var file = fs.OpenTextFile("test.txt", 1);
 //テキスト形式で読み込む
-reader.readAsText("./test.txt");
-var markdown =reader.result.toString().match(/\/\*([^]*)\*\//)[1];
+/*var markdown =file.ReadLine.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
-           $("#container").append(md);
+           $("#container").append(md);*/
+           $("#container").append("bbb");
        </script>
     </body>
 </html>
