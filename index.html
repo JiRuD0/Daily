@@ -15,7 +15,7 @@
 /* var fs = WScript.CreateObject("Scripting.FileSystemObject");
 var file = fs.OpenTextFile("test.txt", 1); */
 function load(){
-  var data_ary;
+  var data_ary= new String();
   $.ajax({
         url: "./test.txt",
         type: "get",
