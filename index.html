@@ -24,6 +24,7 @@ function load(){
             data_ary = data;
             alert(data_ary);
             var markdown =data_ary.match(/\/\*([^]*)\*\//)[1];
+            alert("申し訳ありません><");
            var md = marked(markdown);
            $("#container").append(md);
            alert("申し訳ありません");
