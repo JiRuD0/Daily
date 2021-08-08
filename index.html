@@ -22,15 +22,9 @@ function load(){
         success : function(data) {
             /* data_ary = data.split("\n"); */
             data_ary = data;
-            alert(data_ary);
-            var converter = new Showdown.converter();
-            var html = converter.makeHtml(data_ary);
-            alert(html);
-            /* var markdown =data_ary.match(/\/\*([^]*)\*\//)[1];
-            alert("申し訳ありません><");
-           var md = marked(markdown);
+           var md = marked(data_ary);
            $("#container").append(md);
-           alert("申し訳ありません"); */
+           alert("申し訳ありません"); 
         },
         error:function(data) {
             alert("申し訳ありません。読み込みに失敗しました。");
