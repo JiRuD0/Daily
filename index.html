@@ -15,7 +15,6 @@
 /* var fs = WScript.CreateObject("Scripting.FileSystemObject");
 var file = fs.OpenTextFile("test.txt", 1); */
 function load(){
-  alert("test");
   var data_ary;
   $.ajax({
         url: "./test.txt",
@@ -31,9 +30,9 @@ function load(){
 var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
            $("#container").append(md);
+           alert("申し訳ありません");
            //$(".container").append("bbb".toString());
 }
-window.addEventListener('load',load);
 
        </script>
     </body>
