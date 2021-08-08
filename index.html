@@ -13,7 +13,9 @@
         <script>
 var markdown = (function() {
   const fs = require('fs');
-  fs.readFileSync('test.md', 'utf8')
+  fs.readFile('test.md', 'utf8', (err, data) => {
+    return data;
+  })
 
 }).toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
