@@ -9,9 +9,9 @@
         <div id="container">
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>        <script>
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>        
+        <script type="text/javascript" src="showdown.js"></script>
+        <script>
 /* var fs = WScript.CreateObject("Scripting.FileSystemObject");
 var file = fs.OpenTextFile("test.txt", 1); */
 function load(){
@@ -23,11 +23,14 @@ function load(){
             /* data_ary = data.split("\n"); */
             data_ary = data;
             alert(data_ary);
-            var markdown =data_ary.match(/\/\*([^]*)\*\//)[1];
+            var converter = new Showdown.converter();
+            var html = converter.makeHtml(data_ary);
+            alert(html);
+            /* var markdown =data_ary.match(/\/\*([^]*)\*\//)[1];
             alert("申し訳ありません><");
            var md = marked(markdown);
            $("#container").append(md);
-           alert("申し訳ありません");
+           alert("申し訳ありません"); */
         },
         error:function(data) {
             alert("申し訳ありません。読み込みに失敗しました。");
