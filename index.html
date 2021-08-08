@@ -20,6 +20,7 @@ function load(){
         url: "./test.txt",
         type: "get",
         success : function(data) {
+            alert(data);
             data_ary = data.split("\n");
         },
         error:function(data) {
