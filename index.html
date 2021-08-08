@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
-<body>
-  <h1>${title}</h1>
+    <head>
+      <title>dd</title>
+       <meta charset="UTF-8">
+       <link href="https://rawgithub.com/jasonm23/markdown-css-themes/gh-pages/markdown7.css" rel="stylesheet"></link>
+   </head>
+    <body>
+        <div id="container">
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+        <script>
+var markdown = (function() {/*
 
-  <textarea id='$input' class='input' rows='10'># Hello, world!</textarea>
-  <div id='$output' class='output'></div>
-  
-  <script src='https://cdn.jsdelivr.net/gh/rsms/markdown-wasm@v1.1.2/dist/markdown.js'></script>
-  <script>${script}</script>
-</body>
+# First level header
+
+## Second level header
+
+- あめんぼあかいな
+  - あいうえお
+- **うきも**に`こえび`もおよいでる
+
+---
+
+>かきのきくりのきかきくけこ
+
+*/}).toString().match(/\/\*([^]*)\*\//)[1];
+           var md = marked(markdown);
+           $("#container").append(md);
+       </script>
+    </body>
 </html>
