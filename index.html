@@ -26,7 +26,7 @@ function load(){
             alert("申し訳ありません。読み込みに失敗しました。");
         }
   })
-  alert(data_ary.toString());
+  alert(data_ary);
 //テキスト形式で読み込む
 var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
