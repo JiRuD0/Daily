@@ -15,13 +15,17 @@
 /* var fs = WScript.CreateObject("Scripting.FileSystemObject");
 var file = fs.OpenTextFile("test.txt", 1); */
 function load(){
-  var data_ary= new String();
+  var data_ary;
   $.ajax({
         url: "./test.txt",
         type: "get",
         success : function(data) {
             /* data_ary = data.split("\n"); */
             data_ary = data;
+            var markdown =data_ary.match(/\/\*([^]*)\*\//)[1];
+           var md = marked(markdown);
+           $("#container").append(md);
+           alert("申し訳ありません");
         },
         error:function(data) {
             alert("申し訳ありません。読み込みに失敗しました。");
@@ -29,10 +33,7 @@ function load(){
   })
   alert(data_ary);
 //テキスト形式で読み込む
-var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
-           var md = marked(markdown);
-           $("#container").append(md);
-           alert("申し訳ありません");
+
            //$(".container").append("bbb".toString());
 }
 
