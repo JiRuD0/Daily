@@ -11,21 +11,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
         <script>
-var markdown = (function() {/*
+var markdown = (function() {
+  const fs = require('fs');
+  fs.readFileSync('test.md', 'utf8')
 
-# First level header
-
-## Second level header
-
-- あめんぼあかいな
-  - あいうえお
-- **うきも**に`こえび`もおよいでる
-
----
-
->かきのきくりのきかきくけこ
-
-*/}).toString().match(/\/\*([^]*)\*\//)[1];
+}).toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
            $("#container").append(md);
        </script>
