@@ -13,13 +13,26 @@
         <script>
 
 
-var fs = WScript.CreateObject("Scripting.FileSystemObject");
-var file = fs.OpenTextFile("test.txt", 1);
+/* var fs = WScript.CreateObject("Scripting.FileSystemObject");
+var file = fs.OpenTextFile("test.txt", 1); */
+var data_ary;
+$.ajax({
+        url: "test.txt",
+        type: "get",
+        success : function(data) {
+            data_ary = data.split("\n");
+        },
+        error:function(data) {
+            alert("申し訳ありません。読み込みに失敗しました。");
+        }
+    })
+
+console.log("test");
 //テキスト形式で読み込む
-/*var markdown =file.ReadLine.toString().match(/\/\*([^]*)\*\//)[1];
+var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
-           $("#container").append(md);*/
-           $("#container").append("bbb");
+           $("#container").append(md);
+           //$(".container").append("bbb".toString());
        </script>
     </body>
 </html>
