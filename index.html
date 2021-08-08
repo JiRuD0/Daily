@@ -5,7 +5,7 @@
        <meta charset="UTF-8">
        <!-- <link href="https://rawgithub.com/jasonm23/markdown-css-themes/gh-pages/markdown7.css" rel="stylesheet"> -->
    </head>
-    <body>
+    <body onload="">
         <div id="container">
         </div>
         <!-- <script src="httpsxiangtaizhongye1@gmail.com://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
@@ -15,7 +15,8 @@
 
 /* var fs = WScript.CreateObject("Scripting.FileSystemObject");
 var file = fs.OpenTextFile("test.txt", 1); */
-var data_ary;
+function load(){
+  var data_ary;
 $.ajax({
         url: "tes.txt",
         type: "get",
@@ -33,6 +34,9 @@ var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
            $("#container").append(md);
            //$(".container").append("bbb".toString());
+}
+window.addEventListener('load',load);
+
        </script>
     </body>
 </html>
