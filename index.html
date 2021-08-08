@@ -22,6 +22,7 @@ function load(){
         success : function(data) {
             /* data_ary = data.split("\n"); */
             data_ary = data;
+            alert(data_ary);
             var markdown =data_ary.match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
            $("#container").append(md);
@@ -31,7 +32,7 @@ function load(){
             alert("申し訳ありません。読み込みに失敗しました。");
         }
   })
-  alert(data_ary);
+  
 //テキスト形式で読み込む
 
            //$(".container").append("bbb".toString());
