@@ -16,6 +16,7 @@
 /* var fs = WScript.CreateObject("Scripting.FileSystemObject");
 var file = fs.OpenTextFile("test.txt", 1); */
 function load(){
+  alert("test");
   var data_ary;
 $.ajax({
         url: "tes.txt",
@@ -27,8 +28,6 @@ $.ajax({
             alert("申し訳ありません。読み込みに失敗しました。");
         }
     })
-
-console.log("test");
 //テキスト形式で読み込む
 var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
