@@ -18,8 +18,8 @@ var file = fs.OpenTextFile("test.txt", 1); */
 function load(){
   alert("test");
   var data_ary;
-$.ajax({
-        url: "tes.txt",
+  $.ajax({
+        url: "./tes.txt",
         type: "get",
         success : function(data) {
             data_ary = data.split("\n");
@@ -27,7 +27,7 @@ $.ajax({
         error:function(data) {
             alert("申し訳ありません。読み込みに失敗しました。");
         }
-    })
+  })
 //テキスト形式で読み込む
 var markdown =data_ary.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
