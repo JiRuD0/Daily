@@ -8,14 +8,18 @@
     <body>
         <div id="container">
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script src="httpsxiangtaizhongye1@gmail.com://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
         <script>
+
+var file = evt.target.files;
+
+//FileReaderの作成
+var reader = new FileReader();
+//テキスト形式で読み込む
+reader.readAsText("./test.txt");
 var markdown = (function() {
-  const fs = require('fs');
-  fs.readFile('test.md', 'utf8', (err, data) => {
-    return data;
-  })
+  reader.result
 
 }).toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
