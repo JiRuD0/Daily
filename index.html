@@ -18,10 +18,7 @@ var file = evt.target.files;
 var reader = new FileReader();
 //テキスト形式で読み込む
 reader.readAsText("./test.txt");
-var markdown = (function() {
-  reader.result
-
-}).toString().match(/\/\*([^]*)\*\//)[1];
+var markdown =reader.result.toString().match(/\/\*([^]*)\*\//)[1];
            var md = marked(markdown);
            $("#container").append(md);
        </script>
