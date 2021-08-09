@@ -18,3 +18,7 @@ function load(file){
 function load_Header(header){
     $("#header").load(header);
 }
+
+window.addEventListener('DOMContentLoaded',function() {
+    $("#header").load('./header.html');
+})
