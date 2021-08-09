@@ -2,7 +2,7 @@
 body{
     width: 570%;
     display: inline-block;
-	background: black;
+	background: rgb(255, 0, 0);
 }
 #header{
     color: white;
