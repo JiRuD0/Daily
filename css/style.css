@@ -2,14 +2,15 @@
 #header{
     color: white;
     background: rgb(22, 110, 84);
+    padding-bottom: 0%;
 }
-
+/* -----------参考------------- */
 ul.topnav {
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	background-color: #1b2538;
+	background-color: #225a37;
 }
 ul.topnav li {
 	float: left;
@@ -25,7 +26,7 @@ ul.topnav li a:hover:not(.active) {
 	background-color: #a9bce2;
 }
 ul.topnav li a.active {
-	background-color: #da3c41;
+	background-color: #007e1fd8;
 }
 ul.topnav li.right {
 	float: right;
@@ -35,7 +36,7 @@ ul.topnav li.right {
 		float: none;
 	}
 }
-
+/* ---------ここまで----------------- */
 /* MarkDownレイアウト */
 #container{
     background: rgb(250, 235, 174);
