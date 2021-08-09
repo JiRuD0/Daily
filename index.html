@@ -12,30 +12,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>        
         <script type="text/javascript" src="showdown.js"></script>
-        <script>
-/* var fs = WScript.CreateObject("Scripting.FileSystemObject");
-var file = fs.OpenTextFile("test.txt", 1); */
-function load(){
-  var data_ary;
-  $.ajax({
-        url: "./test.txt",
-        type: "get",
-        success : function(data) {
-            /* data_ary = data.split("\n"); */
-            data_ary = data;
-           var md = marked(data_ary);
-           $("#container").append(md);
-        },
-        error:function(data) {
-            alert("申し訳ありません。読み込みに失敗しました。");
-        }
-  })
-  
-//テキスト形式で読み込む
-
-           //$(".container").append("bbb".toString());
-}
-
-       </script>
+        <script type="text/javascript" src="load.js"></script>
     </body>
 </html>
