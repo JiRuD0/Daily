@@ -1,3 +1,9 @@
+/* 共通部分 */
+#header{
+    color: coral;
+}
+
+/* MarkDownレイアウト */
 #container{
     background: rgb(250, 235, 174);
     border-left: solid 3px rgb(248, 181, 181);
