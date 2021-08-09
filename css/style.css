@@ -1,15 +1,16 @@
 /* 共通部分 */
 #header{
-    color: coral;
+    color: rgb(48, 51, 51);
+    background: rgb(173, 255, 230);
 }
 
 /* MarkDownレイアウト */
 #container{
     background: rgb(250, 235, 174);
-    border-left: solid 3px rgb(248, 181, 181);
+    border-left: solid 8px rgb(248, 181, 181);
     float: left;
 }
 
 #test{
-    background: blue;
+    color: darkgreen;
 }
