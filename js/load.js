@@ -18,5 +18,5 @@ function load(file){
              //$(".container").append("bbb".toString());
 }
 $(function(){
-    　　$("#header").load("header.html");
+    　　$("#header").load("../header.html");
 })
