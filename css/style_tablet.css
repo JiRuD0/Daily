@@ -1,0 +1,65 @@
+/* 共通部分 */
+body{
+    width: 570%;
+    display: inline-block;
+}
+#header{
+    color: white;
+    background: rgb(22, 110, 84);
+    padding-bottom: 0%;
+}
+/* -----------参考------------- */
+ul.topnav {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #225a37;
+}
+ul.topnav li {
+	float: left;
+}
+ul.topnav li a {
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+ul.topnav li a:hover:not(.active) {
+	background-color: #a9bce2;
+}
+ul.topnav li a.home {
+	background-color: #179637d8;
+}
+
+ul.topnav li a.daily {
+	background-color: #5be8ecd8;
+}
+
+ul.topnav li a.none1 {
+	background-color: #9ae959d8;
+}
+
+ul.topnav li a.none2 {
+	background-color: #b8da5ad8;
+}
+
+ul.topnav li.right {
+	float: right;
+}
+@media screen and (max-width: 480px) {
+	ul.topnav li.right, ul.topnav li {
+		float: none;
+	}
+}
+/* ---------ここまで----------------- */
+/* MarkDownレイアウト */
+#container{
+    background: rgb(250, 235, 174);
+    border-left: solid 8px rgb(248, 181, 181);
+}
+
+#test{
+    color: darkgreen;
+}
