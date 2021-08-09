@@ -12,9 +12,11 @@ function load(){
           error:function(data) {
               alert("申し訳ありません。読み込みに失敗しました。");
           }
-    })
-    
+    })    
   //テキスト形式で読み込む
   
              //$(".container").append("bbb".toString());
-  }
+}
+$(function(){
+    　　$("#header").load("header.html");
+})
