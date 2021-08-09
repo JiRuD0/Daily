@@ -1,4 +1,4 @@
-function load(file){
+function load(file,header){
     var data_ary;
     $.ajax({
           url: file,
@@ -13,19 +13,7 @@ function load(file){
               alert("申し訳ありません。読み込みに失敗しました。");
           }
     })    
-  //テキスト形式で読み込む
-  
-             //$(".container").append("bbb".toString());
+    /* $("#header").load(header); */
+    alert(header);
+    $("#header").load(header);
 }
-$(function(){
-/*     var fs = WScript.CreateObject("Scripting.FileSystemObject");
-    var file = fs.OpenTextFile("./header.html", 1); */
-    alert(__dirname);
-    if(file==true){
-        $("#header").load("./header.html");
-        file.close();
-    }
-    else{
-        $("#header").load("../header.html");
-    }
-})
