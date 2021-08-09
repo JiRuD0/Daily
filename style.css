@@ -3,3 +3,7 @@
     border-left: solid 3px rgb(248, 181, 181);
     float: left;
 }
+
+#test{
+    background: blue;
+}
