@@ -18,9 +18,9 @@ function load(file){
              //$(".container").append("bbb".toString());
 }
 $(function(){
-    var fs = WScript.CreateObject("Scripting.FileSystemObject");
-    var file = fs.OpenTextFile("./header.html", 1);
-    alert(file);
+/*     var fs = WScript.CreateObject("Scripting.FileSystemObject");
+    var file = fs.OpenTextFile("./header.html", 1); */
+    alert(__dirname);
     if(file==true){
         $("#header").load("./header.html");
         file.close();
