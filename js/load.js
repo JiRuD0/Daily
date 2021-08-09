@@ -19,7 +19,7 @@ function load(file){
 }
 $(function(){
     var filepath = new air.File("../header.html");
-    if(filepath.exists==true){
+    if(filepath.success==true){
         $("#header").load("../header.html");
     }
     else{
