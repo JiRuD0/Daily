@@ -1,4 +1,4 @@
-function load(file,header){
+function load(file){
     var data_ary;
     $.ajax({
           url: file,
@@ -13,5 +13,8 @@ function load(file,header){
               alert("申し訳ありません。読み込みに失敗しました。");
           }
     })    
+}
+
+function load_Header(header){
     $("#header").load(header);
 }
