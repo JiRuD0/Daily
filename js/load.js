@@ -13,7 +13,5 @@ function load(file,header){
               alert("申し訳ありません。読み込みに失敗しました。");
           }
     })    
-    /* $("#header").load(header); */
-    alert(header);
     $("#header").load(header);
 }
