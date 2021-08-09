@@ -1,7 +1,7 @@
 function load(){
     var data_ary;
     $.ajax({
-          url: "./test.txt",
+          url: "./test.md",
           type: "get",
           success : function(data) {
               /* data_ary = data.split("\n"); */
