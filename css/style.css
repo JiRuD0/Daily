@@ -25,9 +25,22 @@ ul.topnav li a {
 ul.topnav li a:hover:not(.active) {
 	background-color: #a9bce2;
 }
-ul.topnav li a.active {
-	background-color: #007e1fd8;
+ul.topnav li a.home {
+	background-color: #179637d8;
 }
+
+ul.topnav li a.daily {
+	background-color: #36944dd8;
+}
+
+ul.topnav li a.none1 {
+	background-color: #0f471dd8;
+}
+
+ul.topnav li a.none1 {
+	background-color: #5ec478d8;
+}
+
 ul.topnav li.right {
 	float: right;
 }
