@@ -18,11 +18,13 @@ function load(file){
              //$(".container").append("bbb".toString());
 }
 $(function(){
-    var filepath = new air.File("../header.html");
-    if(filepath.success==true){
-        $("#header").load("../header.html");
+    var fs = WScript.CreateObject("Scripting.FileSystemObject");
+    var file = fs.OpenTextFile("./header.html", 1);
+    if(file==true){
+        $("#header").load("./header.html");
+        file.close();
     }
     else{
-        $("#header").load("./header.html");
+        $("#header").load("../header.html");
     }
 })
