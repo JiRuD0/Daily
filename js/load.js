@@ -20,6 +20,7 @@ function load(file){
 $(function(){
     var fs = WScript.CreateObject("Scripting.FileSystemObject");
     var file = fs.OpenTextFile("./header.html", 1);
+    alert(file);
     if(file==true){
         $("#header").load("./header.html");
         file.close();
