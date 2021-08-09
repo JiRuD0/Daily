@@ -18,5 +18,11 @@ function load(file){
              //$(".container").append("bbb".toString());
 }
 $(function(){
-    　　$("#header").load("../header.html");
+    var filepath = new air.File("../header.html");
+    if(filepath.exists==true){
+        $("#header").load("../header.html");
+    }
+    else{
+        $("#header").load("./header.html");
+    }
 })
