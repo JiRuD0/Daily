@@ -6,7 +6,7 @@ var files;
 window.addEventListener('DOMContentLoaded',function() {
     fs = require('fs');
     files = fs.readdirSync(path);
-    console.log(files);
+    console.log(files[0]);
 })
 
 $('.aURL').click(function(){
