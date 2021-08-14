@@ -3,10 +3,13 @@ var article = new Array()
 var path = '../md/outline';
 window.addEventListener('DOMContentLoaded',function() {
     alert(path);
-    var fs = require("fs");
-    alert(files);
-    var files = fs.readdirSync(path);
-    alert(files);
+    try{
+        var fs = require("fs");
+        var files = fs.readdirSync(path);
+    }catch(err){
+        alert("エラーです");
+    }
+    
 })
 
 /* $('.aURL').click(function(){
