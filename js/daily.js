@@ -6,6 +6,7 @@ var files;
 window.addEventListener('DOMContentLoaded',function() {
     alert(path);
     fs = require('fs');
+    alert(files);
     files = fs.readdirSync(path);
     alert(files);
 })
