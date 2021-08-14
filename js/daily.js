@@ -9,6 +9,6 @@ window.addEventListener('DOMContentLoaded',function() {
     files = fs.readdirSync(path);
 })
 
-$('.aURL').click(function(){
+/* $('.aURL').click(function(){
     location.href = './article.html?id=' + 1;
-})
+}) */
