@@ -4,7 +4,7 @@ var path = 'https://jirud0.github.io/Daily/md/outline/';
 var fs;
 var files;
 window.addEventListener('DOMContentLoaded',function() {
-    console.log(path);
+    alert(path);
     fs = require('fs');
     files = fs.readdirSync(path);
 })
