@@ -1,12 +1,12 @@
 // 各記事の日付を格納
 var article = new Array()
-var path = 'https://jirud0.github.io/Daily/md/outline/';
+var path = '../md/outline';
 var fs;
 var files;
 window.addEventListener('DOMContentLoaded',function() {
     alert(path);
     fs = require('fs');
-    files = fs.readdirSync(path);
+    files = fs.readdirSync(path,{withFileTypes: true});
     alert(files);
 })
 
