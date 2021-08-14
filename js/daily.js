@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded',function() {
         var fs = require("fs");
         var files = fs.readdirSync(path);
     }catch(err){
-        alert("エラーです");
+        alert(err);
     }
     
 })
