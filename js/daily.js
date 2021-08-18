@@ -3,7 +3,7 @@ var article = new String();
 const file_path = '../md/outline';
 var path = '../txt/outline.txt';
 
-fetch(path)
+/* fetch(path)
     .then(response => {
         return response.text()
     })
@@ -11,7 +11,7 @@ fetch(path)
         //成功時
         article=result;
         alert(article);
-    })
+    }) */
 
 window.addEventListener('DOMContentLoaded',function() {
     for(let i=0;i<article.length;i++){
