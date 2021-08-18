@@ -11,24 +11,26 @@ var path = '../txt/outline.txt';
         //成功時
         article=result;
         alert(article);
-        load();
+        for(let i=0;i<article.length;i++){
+            load(article[i]);
+        }
+        
     }) 
 
-function load(){
-    for(let i=0;i<article.length;i++){
-        $.ajax({
-            url: file_path+response[i],
-            type: "get",
-            success : function(data) {
-                var md = marked(data);
-                $("#container").append(md);
-                alert(i);
-            },
-            error:function(data) {
-                alert("申し訳ありません。読み込みに失敗しました。");
-             }
-        })    
-    }
+function load(string){
+    alert(string);
+    $.ajax({
+        url: file_path+string,
+        type: "get",
+        success : function(data) {
+            var md = marked(data);
+            $("#container").append(md);
+            alert(i);
+        },
+        error:function(data) {
+            alert("申し訳ありません。読み込みに失敗しました。");
+         }
+    })
 }
 
 /* window.addEventListener('load',function() {
