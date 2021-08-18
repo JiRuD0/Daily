@@ -10,7 +10,7 @@ var path = '../txt/outline.txt';
     .then(result => {
         //成功時
         article=result;
-        alert(article.length);
+/*         alert(article.length); */
         /* for(let i=0;i<article.length;i++){
             
         } */
@@ -19,7 +19,6 @@ var path = '../txt/outline.txt';
     }) 
 
 function load(string){
-    alert(string);
     $.ajax({
         url: file_path+string,
         type: "get",
@@ -32,6 +31,10 @@ function load(string){
          }
     })
 }
+
+window.addEventListener('DOMContentLoaded',function() {
+    $("#header").load('./header.html');
+})
 
 /* window.addEventListener('load',function() {
     
