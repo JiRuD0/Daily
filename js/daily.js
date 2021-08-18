@@ -12,7 +12,7 @@ var path = '../txt/outline.txt';
         article=result;
         alert(article.length);
         for(let i=0;i<article.length;i++){
-            load(article[i]);
+            load(article);
         }
         
     }) 
