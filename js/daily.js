@@ -2,8 +2,8 @@
 var article = new String();
 const file_path = '../md/outline';
 var path = '../txt/outline.txt';
-window.addEventListener('DOMContentLoaded',function() {
-    fetch(path)
+
+fetch(path)
     .then(response => {
         return response.text()
     })
@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded',function() {
         alert(article);
     })
 
+window.addEventListener('DOMContentLoaded',function() {
     for(let i=0;i<article.length;i++){
         alert(i);
         $.ajax({
