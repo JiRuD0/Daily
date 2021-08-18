@@ -1,5 +1,6 @@
 // 各記事の日付を格納
 var article = new String();
+const file_path = '../md/outline';
 var path = '../txt/outline.txt';
 window.addEventListener('DOMContentLoaded',function() {
     fetch(path)
@@ -11,6 +12,20 @@ window.addEventListener('DOMContentLoaded',function() {
         article=result;
         alert(article);
     })
+
+    for(let i=0;i<article.length;i++){
+        $.ajax({
+            url: file_path+response[i],
+            type: "get",
+            success : function(data) {
+               var md = marked(data);
+               $("#container").append(md);
+            },
+            error:function(data) {
+                alert("申し訳ありません。読み込みに失敗しました。");
+            }
+      })    
+    }
     
 })
 
