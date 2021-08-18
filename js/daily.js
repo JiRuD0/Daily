@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded',function() {
     })
 
     for(let i=0;i<article.length;i++){
+        alert(i);
         $.ajax({
             url: file_path+response[i],
             type: "get",
