@@ -16,13 +16,13 @@ var path = '../txt/outline.txt';
 
 function load(){
     for(let i=0;i<article.length;i++){
-        alert(i);
         $.ajax({
             url: file_path+response[i],
             type: "get",
             success : function(data) {
                 var md = marked(data);
                 $("#container").append(md);
+                alert(i);
             },
             error:function(data) {
                 alert("申し訳ありません。読み込みに失敗しました。");
