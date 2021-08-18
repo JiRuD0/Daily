@@ -1,14 +1,16 @@
 // 各記事の日付を格納
-var article = new Array()
-var path = '../md/outline';
+var article = new String();
+var path = '../txt/outline.txt';
 window.addEventListener('DOMContentLoaded',function() {
-    alert(path);
-    try{
-        var fs = require("fs");
-        var files = fs.readdirSync(path);
-    }catch(err){
-        alert(err);
-    }
+    fetch(path)
+    .then(response => {
+        return response.text()
+    })
+    .then(result => {
+        //成功時
+        article=result;
+        alert(article);
+    })
     
 })
 
