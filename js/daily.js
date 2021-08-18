@@ -11,9 +11,27 @@ var path = '../txt/outline.txt';
         //成功時
         article=result;
         alert(article);
+        load();
     }) 
 
-window.addEventListener('load',function() {
+function load(){
+    for(let i=0;i<article.length;i++){
+        alert(i);
+        $.ajax({
+            url: file_path+response[i],
+            type: "get",
+            success : function(data) {
+                var md = marked(data);
+                $("#container").append(md);
+            },
+            error:function(data) {
+                alert("申し訳ありません。読み込みに失敗しました。");
+             }
+        })    
+    }
+}
+
+/* window.addEventListener('load',function() {
     
     for(let i=0;i<article.length;i++){
         alert(i);
@@ -30,7 +48,7 @@ window.addEventListener('load',function() {
       })    
     }
     
-})
+}) */
 
 /* $('.aURL').click(function(){
     location.href = './article.html?id=' + 1;
