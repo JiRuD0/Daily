@@ -1,6 +1,6 @@
 // 各記事の日付を格納
 var article = new String();
-const file_path = '../md/outline';
+const file_path = '../md/outline/';
 var path = '../txt/outline.txt';
 
  fetch(path)
@@ -11,9 +11,10 @@ var path = '../txt/outline.txt';
         //成功時
         article=result;
         alert(article.length);
-        for(let i=0;i<article.length;i++){
-            load(article);
-        }
+        /* for(let i=0;i<article.length;i++){
+            
+        } */
+        load(article);
         
     }) 
 
