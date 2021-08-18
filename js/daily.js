@@ -10,7 +10,7 @@ var path = '../txt/outline.txt';
     .then(result => {
         //成功時
         article=result;
-        alert(article);
+        alert(article.length);
         for(let i=0;i<article.length;i++){
             load(article[i]);
         }
@@ -25,7 +25,6 @@ function load(string){
         success : function(data) {
             var md = marked(data);
             $("#container").append(md);
-            alert(i);
         },
         error:function(data) {
             alert("申し訳ありません。読み込みに失敗しました。");
