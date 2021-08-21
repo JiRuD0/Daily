@@ -14,7 +14,11 @@ var path = '../txt/outline.txt';
         /* for(let i=0;i<article.length;i++){
             
         } */
-        load(article);
+        var arts = article.split('\n');
+        arts.forEach((x,i) => {
+            load(x);
+        });
+        
         
     }) 
 
