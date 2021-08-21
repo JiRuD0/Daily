@@ -46,7 +46,8 @@ ul.topnav li a.none2 {
 	background-color: #b8da5ad8;
 }
 
-ul.topnav li.right {
+ul.topnav li.login {
+	background-color: #f0ffc6d8;
 	float: right;
 }
 @media screen and (max-width: 480px) {
